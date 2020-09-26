@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public id: number = 5;
+  public count: number = 0;
 
   constructor() { }
 
@@ -14,6 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   public goTo(id: number) {
+    this.count = this.count + 1;
     if (id === 5) {
       const el = document.getElementById(id.toString());
       el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});

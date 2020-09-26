@@ -13,13 +13,14 @@ import {
 })
 export class HomeComponent implements OnInit, OnChanges {
   @Input() choice: number = 1;
+  @Input() count: number = 0;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.choice) {
+    if (changes.choice || changes.count) {
       if (this.choice) {
         const el = document.getElementById(this.choice.toString());
         el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
