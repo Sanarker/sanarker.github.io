@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public id: number = 5;
   public count: number = 0;
+  public date: Date = new Date();
 
   constructor() { }
 
@@ -21,6 +22,12 @@ export class HeaderComponent implements OnInit {
       el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
     else {this.id = id}
+  }
+
+  public copyMail(inputElement){
+    inputElement.select();
+    document.execCommand('copy');
+    inputElement.setSelectionRange(0, 0);
   }
 
 }

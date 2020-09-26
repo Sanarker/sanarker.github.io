@@ -1,13 +1,23 @@
 <header class="w-100 p-3" id="5">
-    <div class="d-md-flex d-sm-block col-md-12 p-2 justify-content-around">
-        <a class="m-auto btn btn-dark" (click)="goTo(5)">
-            pic
-        </a>
-        <button class="m-auto btn btn-dark" (click)="goTo(1)">About Me</button>
-        <button class="m-auto btn btn-dark" (click)="goTo(2)">Projects</button>
-        <button class="m-auto btn btn-dark" (click)="goTo(3)">Work Experience</button>
-        <button class="m-auto btn btn-dark" (click)="goTo(4)">Education</button>
+    <div class="d-flex flex-column flex-sm-row">
+        <button class="m-auto btn btn-dark flex-fill flex-wrap" (click)="goTo(1)">About Me</button>
+        <button class="m-auto btn btn-dark flex-fill flex-wrap" (click)="goTo(2)">Projects</button>
+        <button class="m-auto btn btn-dark flex-fill flex-wrap" (click)="goTo(3)">Work Experience</button>
+        <button class="m-auto btn btn-dark flex-fill flex-wrap" (click)="goTo(4)">Education</button>
     </div>
 </header>
 
 <app-home [choice]="id" [count]="count"></app-home>
+
+<footer class="w-100 padding-class d-flex flex-sm-row flex-column">
+    <img src="../../assets/github.svg" alt="" class="m-auto">
+    <img src="../../assets/LI-Logo.png" height="24" width="96" class="filter-white m-auto" alt="">
+    <span class="m-auto text-white pointer" data-toggle="tooltip" data-placement="top" title="copy to clipboard">
+        <img src="../../assets/email.svg" alt="" class="m-auto">
+        <span class="ml-1">sanu2097@outlook.com</span>
+    </span>
+    <span class="m-auto text-white" (click)="goTo(5)">
+        <img src="../../assets/cpy.svg" alt="" class="m-auto ">
+        <span class="ml-1">{{date | date: 'yyyy'}} Sanarker</span>
+    </span>
+</footer>

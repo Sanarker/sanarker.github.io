@@ -1,40 +1,54 @@
 .btn-dark {
-    background-color: #0f4c75;
-    border: none;
+  background-color: #0f4c75;
+  border: none;
 }
 .btn-dark:hover {
-    background-color: #bbe1fa;
-    color: #1F1B24;
+  background-color: #bbe1fa;
+  color: #1f1b24;
 }
 header {
-    background-color: #1b262c ;
+  background-color: #1b262c;
+}
+footer {
+  background-color: #1b262c;
 }
 
 .btn {
-    color:white;
-    font-family:inherit;
-    font-size: inherit;
-    // background: white;
-    padding: 0.3rem 3.4rem;
-    border: 3px solid #1d3e53;
-    margin-right: 2.6rem;
-    box-shadow: 0 0 0 #1d3e53;
-    transition: all 0.2s;
-  }
-  
-  .btn:last-child {
-    margin: 0;
-  }
-  
-  .btn:hover {
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  // background: white;
+  padding: 0.3% 3.4%;
+  border: 3px solid #1d3e53;
+  margin-right: 2.6%;
+  box-shadow: 0 0 0 #1d3e53;
+  transition: all 0.2s;
+}
+
+.btn:last-child {
+  margin: 0;
+}
+
+.btn:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+.filter-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(130%) contrast(102%) grayscale(100%);
+}
+.padding-class {
+  padding: 2rem !important;
+  padding-top: .5rem !important;
+  padding-bottom: .5rem !important;
+}
+.pointer {
+  cursor: pointer;
+}
+
+@media only screen and (max-device-width: 767px) {
+  .btn:focus,
+  .btn:active {
     box-shadow: 0.4rem 0.4rem 0 black;
     transform: translate(-0.4rem, -0.4rem);
   }
-
-  @media only screen and (max-device-width: 767px) {
-    .btn:focus, .btn:active {
-      box-shadow: 0.4rem 0.4rem 0 black;
-      transform: translate(-0.4rem, -0.4rem);
-    }
-  }
-  
+}
