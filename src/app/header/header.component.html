@@ -1,7 +1,13 @@
-<header class="bg-dark w-100">
-    <div class="d-flex col-sm-12 p-2 justify-content-around">
-        <button class="m-auto btn btn-dark">profile pic</button>
-        <button class="m-auto btn btn-dark">hello</button>
-        <button class="m-auto btn btn-dark">nice</button>
+<header class="w-100 p-3" id="5">
+    <div class="d-md-flex d-sm-block col-md-12 p-2 justify-content-around">
+        <a class="m-auto btn btn-dark" (click)="goTo(5)">
+            pic
+        </a>
+        <button class="m-auto btn btn-dark" (click)="goTo(1)">About Me</button>
+        <button class="m-auto btn btn-dark" (click)="goTo(2)">Projects</button>
+        <button class="m-auto btn btn-dark" (click)="goTo(3)">Work Experience</button>
+        <button class="m-auto btn btn-dark" (click)="goTo(4)">Education</button>
     </div>
 </header>
+
+<app-home [choice]="id"></app-home>
