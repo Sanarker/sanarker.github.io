@@ -1,12 +1,20 @@
-<div class="p-4 bg-dark">
-    <app-about-me id="1"></app-about-me>
-</div>
-<div class="p-4 bg-dark">
-    <app-projects id="2"></app-projects>
-</div>
-<div class="p-4 bg-dark">
-    <app-work-experience id="3"></app-work-experience>
-</div>
-<div class="p-4 bg-dark">
-    <app-education id="4"></app-education>
-</div>
+<section id="1">
+    <div class="p-4 bg-dark" *ngIf="choice === 1">
+        <app-about-me></app-about-me>
+    </div>
+</section>
+<section id="2">
+    <div class="p-4 bg-dark" *ngIf="choice === 2">
+        <app-projects></app-projects>
+    </div>
+</section>
+<section id="3">
+    <div class="p-4 bg-dark" *ngIf="choice === 3">
+        <app-work-experience></app-work-experience>
+    </div>
+</section>
+<section id="4">
+    <div class="p-4 bg-dark" *ngIf="choice === 4">
+        <app-education></app-education>
+    </div>
+</section>
