@@ -22,10 +22,10 @@ export class HeaderComponent implements OnInit {
     else {this.id = id}
   }
 
-  public copyMail(inputElement){
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
+  public copyMail(){
+    const inputElement = document.getElementById('mail');
+    navigator.clipboard.writeText(inputElement.innerText);
+    alert('copied to clipboard');
   }
 
 }
